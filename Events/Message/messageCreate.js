@@ -8,7 +8,8 @@ module.exports = {
      * @param {Message} message
      */
     async execute(message, client, Discord) {
-        if (!message.content.startsWith(Prefix) || message.author.bot) return;
+        if (!message.content.startsWith(Prefix) || message.author.bot) 
+        message.reply('That is not a valid command')
 
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
