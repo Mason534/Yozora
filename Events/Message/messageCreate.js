@@ -9,14 +9,14 @@ module.exports = {
      */
     async execute(message, client, Discord) {
         if (!message.content.startsWith(Prefix) || message.author.bot) 
-        message.reply('That is not a valid command')
+        message.reply('You need to add ~ before the word!')
 
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
         const command = client.commands.get(commandName) ||
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-        if (!command) message.reply("You need to add ~ before the word!");
+        if (!command) message.reply("That is not a valid command!");
 
         if (command.permissions) {
             const authorPerms = message.channel.permissionsFor(message.author);
