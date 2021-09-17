@@ -19,13 +19,4 @@ client.cooldowns = new Collection();
     require(`./Handlers/${handler}`)(client, Discord);
 });
 
-client.on('messageCreate', (message) => {
-    if (message.content === 'how do i join') {
-        message.reply({
-            content: 'follow the how to join channel'
-        })
-    }
-})
-
-
 client.login(process.env.TOKEN).catch

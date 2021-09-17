@@ -1,4 +1,4 @@
-module.exports - {
+module.exports = {
     name: "ready",
     execute(client) {
         console.log('The Bot is now online')
