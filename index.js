@@ -10,9 +10,10 @@ const client = new Discord.Client({
     ]
 })
 
-client.on('ready', () => {
-    console.log('the bot is ready')
-})
+client.on("ready", () => {
+    console.log('The bot is now online')
+    client.user.setActivity("for ~help", {type: 'WATCHING'});
+});
 
 client.on('messageCreate', (message) => {
     if (message.content === 'ping') {
