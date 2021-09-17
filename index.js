@@ -1,27 +1,23 @@
 const Discord = require('discord.js')
 const dotenv = require('dotenv')
-const { Intents } = Discord;
+const { Intents, Collection } = Discord;
 dotenv.config()
 
 const client = new Discord.Client({
     intents: [
         Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES
+        Intents.FLAGS.GUILD_MESSAGES,
+        Intents.FLAGS.GUILD_INVITES,
+
     ]
 })
 
-client.on("ready", () => {
-    console.log('The bot is now online')
-    client.user.setActivity("for ~help", {type: 'WATCHING'});
-});
+client.commands = new Collection();
+client.cooldowns = new Collection();
 
-client.on('messageCreate', (message) => {
-    if (message.content === 'ping') {
-        message.reply({
-            content: 'pong'
-        })
-    }
-})
+['eventsHandler', 'commandsHandler'].forEach(handler => {
+    require(`./Handlers/${handler}`)(client, Discord);
+});
 
 client.on('messageCreate', (message) => {
     if (message.content === 'how do i join') {
