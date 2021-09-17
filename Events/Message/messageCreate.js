@@ -13,7 +13,7 @@ module.exports = {
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
         const command = client.commands.get(commandName) ||
-        client.commands.find(cmd => cmd,aliases && cmd.aliases.includes(commandName));
+        client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
         if (!command) message.reply("That is not a valid command!");
 
