@@ -7,6 +7,6 @@ module.exports = (client, Discord) => {
         for (const file of commandFiles) {
             const command = require(`../Commands/${folder}/${file}`);
             client.commands.set(command.name, command);
-        }
-    }
+        };
+    };
 };
