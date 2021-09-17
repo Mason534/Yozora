@@ -16,7 +16,7 @@ module.exports = {
         const command = client.commands.get(commandName) ||
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-        if (!command) message.reply("That is not a valid command!");
+        if (!command) message.reply("You need to add ~ before the word!");
 
         if (command.permissions) {
             const authorPerms = message.channel.permissionsFor(message.author);
