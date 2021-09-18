@@ -23,6 +23,8 @@ module.exports = {
             if (!authorPerms || !authorPerms.has(command.permissions)) {
                 const noPerms = new MessageEmbed()
                 .setColor('FF6F52')
+                .setDescription('You do not have the correct permissions to run this command!')
+                message.channel.send({embeds: [noPerms] })
                 .then((sent) => {
                     setTimeout(() => {
                         sent.delete();
