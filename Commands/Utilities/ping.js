@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
     name: "ping",
     aliases: ['latency', 'lag'],
+    permissions: 'SEND_MESSAGES',
     description: "Shows the ping of the bot!",
-    permissions: "SEND_MESSAGES",
     cooldown: 5,
     execute(message, args, commandName, client, Discord) {
         const Response = new MessageEmbed()

@@ -9,7 +9,7 @@ module.exports = {
      */
     async execute(message, client, Discord) {
         if (!message.content.startsWith(Prefix) || message.author.bot) 
-        message.reply('You need to add ~ before the word!')
+        return;
 
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
