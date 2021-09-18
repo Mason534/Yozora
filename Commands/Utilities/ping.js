@@ -4,7 +4,7 @@ module.exports = {
     name: "ping",
     aliases: ['latency', 'lag'],
     description: "Shows the ping of the bot!",
-    permission: "SEND_MESSAGES",
+    permissions: "SEND_MESSAGES",
     cooldown: 5,
     execute(message, args, commandName, client, Discord) {
         const Response = new MessageEmbed()
