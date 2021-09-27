@@ -30,7 +30,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Games',
-        value: ' `Coming Next Update!` ',
+        value: ' `~ttt(tictactoe)` `more coming soon!` ',
         inline: true
     }, {
         name: 'Solaris Socials',

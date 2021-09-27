@@ -53,7 +53,7 @@ module.exports = {
                 .then((sent) => {
                     setTimeout(() => {
                         sent.delete();
-                    }, 2000);
+                    }, 3000);
                 });
             };
         };
@@ -67,7 +67,7 @@ module.exports = {
             console.log(error);
             const ErrorEmbed = new MessageEmbed()
             .setColor('RED')
-            .setDescription(`An error happened while trying to run this command, check console for more details!`)
+            .setDescription(`An error happened while trying to run this command, please contact staff about the issue!`)
             message.channel.send({embeds: [ErrorEmbed]});
         };
     }
