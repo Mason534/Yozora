@@ -10,6 +10,6 @@ module.exports = {
         const Response = new MessageEmbed()
         .setColor('GREEN')
         .setDescription(`${client.ws.ping}ms`);
-        message.channel.send({embeds: [Response]});
+        message.channel.send({embeds: [Response]})
     }
 }
