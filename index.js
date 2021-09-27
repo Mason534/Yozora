@@ -7,7 +7,7 @@ const client = new Discord.Client({
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGES,
-        Intents.FLAGS.GUILD_INVITES,
+        Intents.FLAGS.GUILD_MEMBERS
 
     ]
 })

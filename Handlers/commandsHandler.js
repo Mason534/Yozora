@@ -9,4 +9,4 @@ module.exports = (client, Discord) => {
             client.commands.set(command.name, command);
         };
     };
-};
+ };
