@@ -42,7 +42,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` ',
+        value: ' `~bot` `~av`',
         inline: true
     }]);
 
