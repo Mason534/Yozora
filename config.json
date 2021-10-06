@@ -1,3 +1,4 @@
 {
-    "Prefix": "~"
+    "Prefix": "~",
+    "Database": "mongodb+srv://Eterno:SOL2019@solalfie.4euzc.mongodb.net/SOLAFLIE?retryWrites=true&w=majority"
 }
