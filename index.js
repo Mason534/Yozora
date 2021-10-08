@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const dotenv = require('dotenv')
+const messageCreate = require('./Events/Message/messageCreate');
 const { Intents, Collection } = Discord;
 dotenv.config()
 
