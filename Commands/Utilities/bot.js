@@ -32,6 +32,14 @@ module.exports = {
         name: 'Bot Prefix',
         value: '~',
         inline: true
+    }, {
+        name: 'Member count',
+        value: `${client.guilds.cache.reduce((a,b) => a+b.memberCount, 0)}`,
+        inline: true
+    }, {
+        name: 'Ping',
+        value: `${client.ws.ping}ms`,
+        inline: true
     }]);
 
         message.channel.send({embeds: [Response]})
