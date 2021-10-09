@@ -101,10 +101,6 @@ module.exports = {
         value: `${message.guild.memberCount}`,
         inline: true
     }, {
-        name: 'Bots',
-        value: `${members.filter(member => member.user.bot).size}`,
-        inline: true
-    }, {
         name: 'Emojis',
         value: `${emojis.size}`,
         inline: true

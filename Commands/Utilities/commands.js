@@ -42,7 +42,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` `~av` `~masterlink`',
+        value: ' `~bot` `~av` `~masterlink` ~serverinfo` ',
         inline: true
     }]);
 
