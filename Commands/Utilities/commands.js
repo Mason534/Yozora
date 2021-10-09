@@ -22,7 +22,7 @@ module.exports = {
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `~rules` `~manual` `~civranks` `~jobs` `~merch` `~website` `~cad` `~penalcodes` `~civapps` `~vip` ',
+        value: ' `~rules` `~manual` `~civranks` `~jobs` `~merch` `~website` `~cad` `~penalcodes` `~civapps` `~vip` `~masterlink`',
         inline: true
     }, { 
         name: 'Text-List',
@@ -42,7 +42,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` `~av` `~masterlink` ~serverinfo` ',
+        value: ' `~bot` `~av` `~serverinfo` ',
         inline: true
     }]);
 
