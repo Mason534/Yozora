@@ -110,11 +110,11 @@ module.exports = {
         inline: true
     }, {
         name: 'Text Channels',
-        value: `${channels.filter(channel => channel.type === 'text').size}`,
+        value: `${channels.filter(channel => channel.type === 'GUILD_TEXT').size}`,
         inline: true
     }, {
         name: 'Voice Channels',
-        value: `${channels.filter(channel => channel.type === 'voice').size}`,
+        value: `${channels.filter(channel => channel.type === 'GUILD_VOICE').size}`,
         inline: true
     }, {
         name: 'Boosts',
