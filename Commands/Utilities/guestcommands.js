@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-    name: 'commands',
+    name: 'guestcommands',
     aliases: [''],
     permissions: 'SEND_MESSAGES',
     description: "Sends the bots commands",
