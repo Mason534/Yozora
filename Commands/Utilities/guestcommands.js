@@ -22,7 +22,7 @@ module.exports = {
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `~rules` `~manual` `~civranks` `~jobs` `~merch` `~website` `~cad` `~penalcodes` `~civapps` `~vip` `~masterlink`',
+        value: ' `~rules` `~manual` `~civranks` `~merch` `~website` `~vip`',
         inline: true
     }, { 
         name: 'Text-List',
@@ -37,17 +37,10 @@ module.exports = {
         value: ' `~instagram` `~tiktok` ',
         inline: true
     }, {
-        name: 'Solaris Sub-Servers',
-        value: ' `~subservers` ',
-        inline: true
-    }, {
         name: 'Other',
         value: ' `~bot` `~av` `~serverinfo` `~whois` ',
         inline: true
-    }, {
-        name: 'Roleplay commands',
-        value: ' `~pfuel` `~dfuel` `~fuel` `~cuff` `~uncuff` `~tow` ',
-        inline: true
+        
     }]);
 
         message.channel.send({embeds: [Response]})
