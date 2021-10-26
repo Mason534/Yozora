@@ -27,27 +27,27 @@ module.exports = {
       }, 7200000)
       setTimeout(function() {
         msg.channel.send({embeds: [Response]})
+      }, 10800000)
+      setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
       }, 14400000)
-//      setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//      }, 40000)
-//      setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//      }, 50000)
-//      setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//      }, 60000)
-//      setTimeout(function() {
-//       msg.channel.send({embeds: [Response]})
-//      },  70000)
-//      setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//      },  80000)
-//     setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//      },  90000)
-//     setTimeout(function() {
-//        msg.channel.send({embeds: [Response]})
-//     }, 100000)
+      setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
+      }, 18000000)
+      setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
+      }, 21600000)
+      setTimeout(function() {
+       msg.channel.send({embeds: [Response]})
+      },  25200000)
+      setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
+      },  28800000)
+     setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
+      },  32400000)
+     setTimeout(function() {
+        msg.channel.send({embeds: [Response]})
+     }, 36000000)
      });
     }}
