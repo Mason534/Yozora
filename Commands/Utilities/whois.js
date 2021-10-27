@@ -28,9 +28,10 @@ module.exports = {
         const Response = new MessageEmbed()
         .setAuthor(`${Target.username}`, Target.displayAvatarURL({dynamic: true}))
         .setThumbnail(Target.displayAvatarURL({dynamic: true}))
-        .setColor("YELLOW")
-        .addField("Member" , `${Target}`, false)
-        .addField("Roles" , `${Member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`)
+        .setColor("FF6F52")
+        .addField("Member" , `${Target} `, false)
+        //.addField("Roles" , `${Member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`)
+        .addField('Amount of Server Roles', `${Member.roles.cache.size}`)
         .addField("Server Member Since", `${moment(Member.joinedAt).format('MMMM Do YYYY, h:mm:ss a')}\n**-**${moment(Member.joinedAt).startOf('day').fromNow()}`)
         .addField("Discord Member Since", `${moment(Target.createdAt).format('MMMM Do YYYY, h:mm:ss a')}\n**-**${moment(Target.createdAt).startOf('day').fromNow()}`)
         message.reply({embeds: [Response]});
