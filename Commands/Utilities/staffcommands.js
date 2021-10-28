@@ -22,15 +22,15 @@ module.exports = {
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `~rules` `~manual` `~civranks` `~jobs` `~merch` `~website` `~cad` `~penalcodes` `~civapps` `~vip` ',
+        value: ' `-rules` `-manual` `-civranks` `-jobs` `-merch` `-website` `-cad` `-penalcodes` `-civapps` `-vip` ',
         inline: true
     }, { 
         name: 'Text-List',
-        value: ' `~directortdl` `~stafftdl` ',
+        value: ' `-directortdl` `-stafftdl` ',
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` ',
+        value: ' `-bot` ',
         inline: true
     }]);
 

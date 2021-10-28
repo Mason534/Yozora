@@ -30,7 +30,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Bot Prefix',
-        value: '~',
+        value: '-',
         inline: true
     }, {
         name: 'Member count',

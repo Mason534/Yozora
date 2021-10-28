@@ -22,23 +22,23 @@ module.exports = {
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `~rules` `~manual` `~civranks` `~merch` `~website` `~vip`',
+        value: ' `-rules` `-manual` `-civranks` `-merch` `-website` `-vip`',
         inline: true
     }, { 
         name: 'Text-List',
-        value: ' `~ping` `~getstaffrole` `~say` ',
+        value: ' `-ping` `-getstaffrole` `-say` ',
         inline: true
     }, {
         name: 'Games',
-        value: ' `~hack (mention)` ',
+        value: ' `-hack (mention)` ',
         inline: true
     }, {
         name: 'Solaris Socials',
-        value: ' `~instagram` `~tiktok` ',
+        value: ' `-instagram` `-tiktok` ',
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` `~av` `~serverinfo` `~whois` ',
+        value: ' `-bot` `-av` `-serverinfo` `-whois` ',
         inline: true
         
     }]);
