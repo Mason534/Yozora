@@ -22,31 +22,31 @@ module.exports = {
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `~rules` `~manual` `~civranks` `~jobs` `~merch` `~website` `~cad` `~penalcodes` `~civapps` `~vip` `~masterlink`',
+        value: ' `-rules` `-manual` `-civranks` `-jobs` `-merch` `-website` `-cad` `-penalcodes` `-civapps` `-vip` `-masterlink`',
         inline: true
     }, { 
         name: 'Text-List',
-        value: ' `~ping` `~getstaffrole` `~say` ',
+        value: ' `-ping` `-getstaffrole` `-say` ',
         inline: true
     }, {
         name: 'Games',
-        value: ' `~hack (mention)` ',
+        value: ' `-hack (mention)` ',
         inline: true
     }, {
         name: 'Solaris Socials',
-        value: ' `~instagram` `~tiktok` ',
+        value: ' `-instagram` `-tiktok` ',
         inline: true
     }, {
         name: 'Solaris Sub-Servers',
-        value: ' `~subservers` ',
+        value: ' `-subservers` ',
         inline: true
     }, {
         name: 'Other',
-        value: ' `~bot` `~av` `~serverinfo` `~whois` ',
+        value: ' `-bot` `-av` `-serverinfo` `-whois` ',
         inline: true
     }, {
         name: 'Roleplay commands',
-        value: ' `~pfuel` `~dfuel` `~fuel` `~cuff` `~uncuff` `~tow` ',
+        value: ' `-pfuel` `-dfuel` `-fuel` `-cuff` `-uncuff` `-tow` `-post (text)` ',
         inline: true
     }]);
 
