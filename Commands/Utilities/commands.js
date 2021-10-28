@@ -26,7 +26,7 @@ module.exports = {
         inline: true
     }, { 
         name: 'Text-List',
-        value: ' `-ping` `-getstaffrole` `-say` ',
+        value: ' `-ping` ` -getstaffrole` `-say` ',
         inline: true
     }, {
         name: 'Games',
@@ -42,7 +42,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Other',
-        value: ' `-bot` `-av` `-serverinfo` `-whois` ',
+        value: ' `-bot` `-av` ` -serverinfo` `-whois` ',
         inline: true
     }, {
         name: 'Roleplay commands',
