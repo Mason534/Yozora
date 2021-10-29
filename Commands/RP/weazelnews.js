@@ -1,8 +1,8 @@
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-    name: 'weazel',
-    aliases: ['write'],
+    name: 'weazelarticle',
+    aliases: [''],
     permissions: 'SEND_MESSAGES',
     description: "posts a news embed",
     cooldown: 3,
