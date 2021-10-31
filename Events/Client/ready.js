@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Database } = require("../../config.json");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "ready",
