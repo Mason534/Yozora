@@ -7,11 +7,18 @@ module.exports = {
         console.log('The bot is now ready!')
         let servers = client.guilds.cache.size
         let servercount = client.guilds.cache.reduce((a,b) => a+b.memberCount, 0)
+        var test = client.channels.cache.find(channel => channel.id === '896738211190153237');
+        const Response = new MessageEmbed()
+            .setColor('FF6F52')
+	        .setTitle('**Welcome to Solaris!**')
+	        .setDescription(`To join our server and Roleplay along with all of our members, please follow the steps found in the #how-to-join channel!\nEnjoy your time in Solaris!`)
+	        .setThumbnail(client.user.avatarURL({dynamic: true }))
+	        .setFooter(`If you have any problems, contact staff!`)
 
         const activities = [
             `${servers} servers!`,
             `over ${servercount} members!`,
-            `for ~help`
+            `for -help`
         ]
 
         setInterval(()=>{
@@ -19,6 +26,10 @@ module.exports = {
             client.user.setPresence({ activities: [{name: `${status}`, type: 'WATCHING'}]})
 
         }, 5000)
+
+        setInterval(() => {
+            test.send({embeds: [Response]})
+        }, 10800000);
 
         if(!Database) return;
         mongoose.connect(Database, {
