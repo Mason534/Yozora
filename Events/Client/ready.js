@@ -8,7 +8,7 @@ module.exports = {
         console.log('The bot is now ready!')
         let servers = client.guilds.cache.size
         let servercount = client.guilds.cache.reduce((a,b) => a+b.memberCount, 0)
-        var test = client.channels.cache.find(channel => channel.id === '896738211190153237');
+        var test = client.channels.cache.find(channel => channel.id === '560019110365495296');
         const Response = new MessageEmbed()
             .setColor('FF6F52')
 	        .setTitle('**Welcome to Solaris!**')
