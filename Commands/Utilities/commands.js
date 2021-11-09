@@ -16,37 +16,37 @@ module.exports = {
 	.setTitle('Bot Command List')
 	.setURL('https://ardenloncke.wixsite.com/solaris-rp')
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
-	.setDescription(`This is an embed for Bot Commands`)
+	.setDescription(`Don't forget to use the prefix "-" before using a command!`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
 	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Link-list',
-        value: ' `-rules` `-manual` `-civranks` `-jobs` `-merch` `-website` `-cad` `-penalcodes` `-civapps` `-vip` `-masterlink`',
+        value: ' `rules` `manual` `civranks` `jobs` `merch` `website` `cad` `penalcodes` `civapps` `vip` `masterlink`',
         inline: true
     }, { 
         name: 'Text-List',
-        value: ' `-ping` ` -getstaffrole` `-say` ',
+        value: ' `ping` ` getstaffrole` `say` ',
         inline: true
     }, {
         name: 'Games',
-        value: ' `-hack (mention)` `-activity (name)` ',
+        value: ' `hack (mention)` `activity (name)` ',
         inline: true
     }, {
         name: 'Solaris Socials',
-        value: ' `-instagram` `-tiktok` ',
+        value: ' `instagram` `tiktok` ',
         inline: true
     }, {
         name: 'Solaris Sub-Servers',
-        value: ' `-subservers` ',
+        value: ' `subservers` ',
         inline: true
     }, {
         name: 'Other',
-        value: ' `-bot` `-av` ` -serverinfo` `-whois` ',
+        value: ' `bot` `av` ` serverinfo` `whois` `suggest (text)` ',
         inline: true
     }, {
         name: 'Roleplay commands',
-        value: ' `-pfuel` `-dfuel` `-fuel` `-cuff` `-uncuff` `-tow` `-post (text)` ',
+        value: ' `pfuel` `dfuel` `fuel` `cuff` `uncuff` `tow` `post (text)` ',
         inline: true
     }]);
 
