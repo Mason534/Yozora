@@ -7,7 +7,7 @@ module.exports = {
     permission: "SEND_MESSAGES",
     type: "TEXT",
     async execute(message, args, client) {
-        got('https://www.reddit.com/r/animememes/random/.json').then(res => {
+        got('https://www.reddit.com/r/memes/random/.json').then(res => {
             let content = JSON.parse(res.body)
             message.channel.send({embeds: [  new MessageEmbed()
                     .setTitle(content[0].data.children[0].data.title)
