@@ -30,7 +30,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Games',
-        value: ' `hack (mention)` `activity (name)` ',
+        value: ' `hack (mention)` `activity (name)` `meme` ',
         inline: true
     }, {
         name: 'Solaris Socials',
