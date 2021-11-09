@@ -8,7 +8,7 @@ module.exports = {
 
     async execute(message, args, client, member, guild){
 
-        const channel = message.guild.channels.cache.get('896738211190153237'); 
+        const channel = message.guild.channels.cache.get('693520401556570214'); 
 
         let suggestmessage = args.slice().join(' ')
         setTimeout(function() {
