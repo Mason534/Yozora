@@ -8,9 +8,12 @@ module.exports = {
 
     async execute(message, args, client, member, guild){
 
-        const channel = message.guild.channels.cache.get('693520401556570214'); 
+        const channel = message.guild.channels.cache.get('896738211190153237'); 
 
-        let suggestmessage = args.slice().join(' ');
+        let suggestmessage = args.slice().join(' ')
+        setTimeout(function() {
+            message.delete()
+          }, 1000)
 
         let suggestembed = new Discord.MessageEmbed()
         .setTitle('A new suggestion has been made:')
