@@ -20,4 +20,48 @@ client.cooldowns = new Collection();
     require(`./Handlers/${handler}`)(client, Discord);
 });
 
+const roleID = '913312628728819732'
+const inviteLink = "discord.gg/eaVKQNx"
+
+client.on('presenceUpdate', (_oldPresence, newPresence) => {
+    const member = newPresence.member
+    if (member) {
+      // Ignore members who already have the role
+      if (member.roles.cache.has(roleID)) {
+        const customStatus = newPresence.activities
+          .find(activity => activity.type === 'CUSTOM')
+          ?.state
+        if (customStatus) {
+          if (!customStatus.includes(inviteLink)) {
+            member.roles.remove(roleID)
+              .catch(console.error)
+        if (!customStatus.includes()) {
+            member.roles.remove(roleID)
+                .catch(console.error)
+              
+          }
+        }
+      }
+    }
+  }})
+
+client.on('presenceUpdate', (_oldPresence, newPresence) => {
+  const member = newPresence.member
+  if (member) {
+    // Ignore members who already have the role
+    if (!member.roles.cache.has(roleID)) {
+      const customStatus = newPresence.activities
+        .find(activity => activity.type === 'CUSTOM')
+        ?.state
+      if (customStatus) {
+        if (customStatus.includes(inviteLink)) {
+          member.roles.add(roleID)
+            .catch(console.error)
+            
+        }
+      }
+    }
+  }
+})
+
 client.login(process.env.TOKEN).catch
