@@ -12,7 +12,7 @@ module.exports = {
         const Response = new MessageEmbed()
             .setColor('FF6F52')
 	        .setTitle('**Welcome to Solaris!**')
-	        .setDescription(`To join our server and Roleplay along with all of our members, please follow the steps found in the #how-to-join channel!\nEnjoy your time in Solaris!`)
+	        .setDescription(`To join our server and Roleplay along with all of our members, please follow the steps found in the <#562667291485929472> channel!\nEnjoy your time in Solaris!`)
 	        .setThumbnail(client.user.avatarURL({dynamic: true }))
 	        .setFooter(`If you have any problems, contact staff!`)
 
