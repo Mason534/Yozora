@@ -67,17 +67,4 @@ client.on('presenceUpdate', (_oldPresence, newPresence) => {
   }
 })
 
-const generateImage = require("./generateImage")
-
-const welcomeChannelId = "560019110365495296"
-
-client.on("guildMemberAdd", async (member) => {
-    const img = await generateImage(member)
-    member.guild.channels.cache.get(welcomeChannelId).send({
-        content: `<@${member.id}> Welcome to the server! \n Please follow the steps found in the <#562667291485929472> channel!`,
-        files: [img]
-    })
-})
-
-
 client.login(process.env.TOKEN).catch
