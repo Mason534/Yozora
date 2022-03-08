@@ -67,8 +67,5 @@ client.on('presenceUpdate', (_oldPresence, newPresence) => {
   }
 })
 
-const generateImage = require("./generateImage")
-
-const welcomeChannelId = "560019110365495296"
 
 client.login(process.env.TOKEN).catch
