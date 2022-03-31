@@ -1,7 +1,7 @@
 const { MessageEmbed, Channel } = require("discord.js");
 
 module.exports = {
-    name: 'test1',
+    name: 'preflight',
     aliases: [''],
     permissions: 'SEND_MESSAGES',
     description: "lists off preflight checklist",
