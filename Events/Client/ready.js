@@ -30,7 +30,7 @@ module.exports = {
 
         setInterval(() => {
             test.send({embeds: [Response]})
-        }, 10800000);
+        }, 18000000);
 
         if(!Database) return;
         mongoose.connect(Database, {
