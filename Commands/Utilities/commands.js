@@ -46,7 +46,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Roleplay commands',
-        value: ' `pfuel` `dfuel` `fuel` `cuff` `uncuff` `tow` `post (text)` ',
+        value: ' `pfuel` `dfuel` `fix` `fuel` `cuff` `uncuff` `tow` `post (text)` ',
         inline: true
     }]);
 
