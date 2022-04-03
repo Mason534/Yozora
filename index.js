@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 const messageCreate = require('./Events/Message/messageCreate');
 const { Intents, Collection } = Discord;
 const mongoose = require("mongoose");
+const profileModel = require("../../models/profileSchema");
 dotenv.config()
 
 const client = new Discord.Client({
