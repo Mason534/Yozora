@@ -9,7 +9,7 @@ module.exports = {
     const amount = args[0];
     if (amount % 1 != 0 || amount <= 0) return message.channel.send("__Deposit amount must be a whole number__");
     try {
-      if (amount > profileData.coins) return message.channel.send(`You don't have that amount of coins to deposit`);
+      if (amount > profileData.coins) return message.channel.send(`You don't have that amount of money to deposit`);
       await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
