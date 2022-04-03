@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+///const mongoose = require("mongoose");
 const { Database } = require("../../config.json");
 const { MessageEmbed } = require("discord.js");
 
@@ -32,13 +32,13 @@ module.exports = {
             test.send({embeds: [Response]})
         }, 18000000);
 
-        if(!Database) return;
-        mongoose.connect(Database, {
+        //if(!Database) return;
+       // mongoose.connect(Database, {
 
-        }).then(() => {
-            console.log("The bot is now connected to the Database!")
-        }).catch((Error) => {
-            console.log(Error)
-        });
+       // }).then(() => {
+        //    console.log("The bot is now connected to the Database!")
+       // }).catch((Error) => {
+        //    console.log(Error)
+        ;
     }
 };
