@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const dotenv = require('dotenv')
 const messageCreate = require('./Events/Message/messageCreate');
 const { Intents, Collection } = Discord;
-const mongoose = require("mongoose");
+///const mongoose = require("mongoose");
 dotenv.config()
 
 const client = new Discord.Client({
