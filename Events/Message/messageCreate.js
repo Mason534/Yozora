@@ -1,5 +1,6 @@
 const { Client, Message, MessageEmbed, Collection } = require('discord.js');
 const { Prefix } = require('../../config.json');
+const profileModel = require("../../models/profileSchema");
 
 module.exports = {
     name: "messageCreate",
@@ -8,9 +9,8 @@ module.exports = {
      * @param {Message} message 
      */
     async execute(message, client, Discord) {
-        if (!message.content.startsWith(Prefix) || message.author.bot) return;
 
-        const profileModel = require("../../models/profileSchema");
+        if (!message.content.startsWith(Prefix) || message.author.bot) return;
 
         let profileData;
   try {
