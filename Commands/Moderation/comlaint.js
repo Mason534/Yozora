@@ -20,5 +20,8 @@ module.exports = {
         .setDescription(`${suggestmessage}`)
         .setTimestamp()
         .setColor("FF6F52")
+        
+
+        channel.send({embeds: [suggestembed]}) 
     }
 };
