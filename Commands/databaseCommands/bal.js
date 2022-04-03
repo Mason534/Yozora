@@ -11,6 +11,7 @@ module.exports = {
         const Wallet = profileData.coins
         const Bank = profileData.bank
 
+
         const Response = new MessageEmbed()
         .setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
         .setColor('ORANGE')

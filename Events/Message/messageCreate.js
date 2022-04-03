@@ -12,21 +12,21 @@ module.exports = {
 
         if (!message.content.startsWith(Prefix) || message.author.bot) return;
 
-        let profileData;
-  try {
-    profileData = await profileModel.findOne({ userID: message.author.id });
-    if (!profileData) {
-      let profile = await profileModel.create({
-        userID: message.author.id,
-        serverID: message.guild.id,
-        coins: 0,
-        bank: 0,
-      });
-      profile.save();
-    }
-  } catch (err) {
-    console.log(err);
-  }
+        ///let profileData;
+  ///try {
+   /// profileData = await profileModel.findOne({ userID: message.author.id });
+    ///if (!profileData) {
+     /// let profile = await profileModel.create({
+       /// userID: message.author.id,
+       /// serverID: message.guild.id,
+       /// coins: 0,
+       /// bank: 0,
+      ///});
+      ///profile.save();
+    ///}
+  ///} catch (err) {
+    ///console.log(err);
+  ///}
         
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
