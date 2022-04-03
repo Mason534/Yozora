@@ -7,6 +7,7 @@ module.exports = {
     description: "Check the user balance",
     async execute(message, args, commandName, client, Discord, profileData) {
         
+        const person = message.mentions.user.id
         const Wallet = profileData.coins
         const Bank = profileData.bank
 
