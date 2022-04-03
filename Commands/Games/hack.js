@@ -3,7 +3,7 @@ module.exports = {
     name: 'hack',
     category: 'fun',
     
-execute(message, args, commandName, client, Discord, profileData) {
+execute(message, args, commandName, client, Discord) {
     
        
 

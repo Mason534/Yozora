@@ -6,7 +6,7 @@ module.exports = {
     description: 'Sends any complaint someone wrote directly into staff chat.',
     permission: "SEND_MESSAGES",
 
-    async execute(message, args, client, member, guild, profileData){
+    async execute(message, args, client, member, guild){
 
         const channel = message.guild.channels.cache.get('559349489840947250'); 
 

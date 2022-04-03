@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Shows the bots commands",
     cooldown: 1000000,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
         if (!message.member.roles.cache.has('895689513794433034'))
         return (message.channel.send("You do not have permission to use this command!"));
 

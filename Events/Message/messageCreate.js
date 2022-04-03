@@ -79,7 +79,7 @@ module.exports = {
         setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
         try {
-            command.execute(message, args, commandName, client, Discord);
+            command.execute(message, args, commandName, client, Discord, profileData);
         } catch (error) {
             console.log(error);
             const ErrorEmbed = new MessageEmbed()

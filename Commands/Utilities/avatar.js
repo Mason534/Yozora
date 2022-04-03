@@ -4,7 +4,7 @@ module.exports = {
     name: 'avatar',
     aliases: 'av',
     description: 'shows profile picture',
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
         const Target = message.mentions.users.first() || message.author;
 
         const Response = new MessageEmbed()

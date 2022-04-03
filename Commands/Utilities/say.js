@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
     
         message.reply(args.slice().join(" "));
     }

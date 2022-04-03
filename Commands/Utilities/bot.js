@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Shows the bots commands",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
         const Response = new MessageEmbed()
         .setColor('FF6F52')
 	.setTitle('Bot Information Embed!')

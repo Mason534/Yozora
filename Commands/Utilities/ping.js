@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Sends the clients ping",
     cooldown: 5,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
         const Response = new MessageEmbed()
         .setColor('GREEN')
         .setDescription(`${client.ws.ping}ms`);

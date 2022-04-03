@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'MANAGE_CHANNELS',
     description: "nah",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
      if(!message.member.roles.cache.has('565275714035646475'))
      return(message.channel.send('You do not have the correct roles for that!'))
      else {

@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "fueles car",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
         const Target = message.author;
 
         message.reply("Please wait 15 seconds, don't forget to pay!")

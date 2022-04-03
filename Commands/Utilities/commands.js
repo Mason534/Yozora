@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Sends the bots commands",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
      
         if (message.member.roles.cache.has('559353376190627841')){
             return (message.reply('You do not have the correct roles to use this command!'))

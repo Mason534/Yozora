@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "cuffs the mentioned player",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
 
         const Target = message.mentions.users.first() || message.author;
 

@@ -4,7 +4,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "trolls",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
     
         message.reply('https://tenor.com/view/rick-astley-rick-roll-dancing-dance-moves-gif-14097983')
         .then((sent) => {

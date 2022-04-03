@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Shows the bots commands",
     cooldown: 1,
-    execute(message, args, commandName, client, Discord, profileData) {
+    execute(message, args, commandName, client, Discord) {
 
         let role = message.guild.roles.cache.find(r => r.id === "903999535855071303");
         const User = message.author;
