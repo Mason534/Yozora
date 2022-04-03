@@ -1,6 +1,6 @@
 const { Client, Message, MessageEmbed, Collection } = require('discord.js');
 const { Prefix } = require('../../config.json');
-const profileModel = require("../../Models/profileSchema");
+///const profileModel = require("../../Models/profileSchema");
 
 module.exports = {
     name: "messageCreate",
