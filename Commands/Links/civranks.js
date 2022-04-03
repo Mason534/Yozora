@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Sends the civilian ranks link!",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         const Response = new MessageEmbed()
         .setColor('FF6F52')
 	.setTitle('Civilian Ranks!')

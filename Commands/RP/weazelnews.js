@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "posts a news embed",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         const LF = (args.slice('').join(" "))
         setTimeout(function() {
             message.delete()

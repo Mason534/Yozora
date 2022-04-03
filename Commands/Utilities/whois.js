@@ -7,7 +7,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "self explanatory ",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         const Target = message.mentions.users.first() || message.author;
         const Member = message.guild.members.cache.get(Target.id);
 

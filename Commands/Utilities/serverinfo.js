@@ -62,7 +62,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "Shows the server information",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         
         const roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
 

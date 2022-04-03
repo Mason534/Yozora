@@ -34,8 +34,6 @@ module.exports = {
 
         if(!Database) return;
         mongoose.connect(Database, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
         }).then(() => {
             console.log("The bot is now connected to the Database!")
         }).catch((Error) => {

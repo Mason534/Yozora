@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "soalris rules",
     cooldown: 20,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         const Response = new MessageEmbed()
         .setColor('FF6F52')
 	.setTitle('Rules!')

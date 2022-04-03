@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "sends the links for the other servers",
     cooldown: 10,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
         const Response = new MessageEmbed()
         .setColor('FF6F52')
 	.setTitle('Solaris sub-servers')

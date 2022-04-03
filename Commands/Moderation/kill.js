@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'MANAGE_CHANNELS',
     description: "turns the bot off",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
 
         process.exit();
 

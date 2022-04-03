@@ -6,7 +6,7 @@ module.exports = {
     permission: "MANAGE_MESSAGES",
     cooldown: 10, 
 
-    async execute(message, args, client) {
+    async execute(message, args, client, profileData) {
         if (message.author.id !== '286338137259769857') return message.reply('Owner only cmd.');
         // just remove this line ^^^^^ if you dont want it to be owner only.
         const L = (args.slice('').join(" "))

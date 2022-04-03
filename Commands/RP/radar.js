@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "performs the radar command",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord) {
+    execute(message, args, commandName, client, Discord, profileData) {
     const Target = message.author;
 
         message.reply(`${Target} is now running radar!`)

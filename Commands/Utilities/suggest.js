@@ -6,7 +6,7 @@ module.exports = {
     description: 'suggestion command',
     permission: "SEND_MESSAGES",
 
-    async execute(message, args, client, member, guild){
+    async execute(message, args, client, member, guild, profileData){
 
         const channel = message.guild.channels.cache.get('693520401556570214'); 
 

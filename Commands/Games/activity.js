@@ -10,7 +10,7 @@ module.exports = {
      * @param {Message} message
      * @param {String[]} args
      */
-     execute(message, args, commandName, client, Discord) {
+     execute(message, args, commandName, client, Discord, profileData) {
         const channel = message.member.voice.channel
         if(channel) {
           if(!args[0]) return message.reply({ embeds: [

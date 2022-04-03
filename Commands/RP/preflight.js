@@ -6,7 +6,7 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "lists off preflight checklist",
     cooldown: 3,
-    async execute(message, args, commandName, client, Discord) {
+    async execute(message, args, commandName, client, Discord, profileData) {
         const Target = message.author;
         const argument = (args.slice().join(" "))
         const user =  message.mentions.users.first()
