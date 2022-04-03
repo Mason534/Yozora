@@ -16,7 +16,7 @@ module.exports = {
           }, 100)
 
         let suggestembed = new Discord.MessageEmbed()
-        .setTitle('A new complaint has been filed!:')
+        .setTitle('A new complaint has been filed!')
         .setDescription(`${suggestmessage}`)
         .setTimestamp()
         .setColor("FF6F52")
