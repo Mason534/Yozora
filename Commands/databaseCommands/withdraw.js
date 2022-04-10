@@ -24,7 +24,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`You withdrew ${amount} of cash into your wallet!`);
+      return message.channel.send(`You withdrew **$${amount}** of cash into your wallet!`);
     } catch (err) {
       console.log(err);
     }

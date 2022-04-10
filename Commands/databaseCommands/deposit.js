@@ -22,7 +22,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`You deposited **${amount}** into your bank!`);
+      return message.channel.send(`You deposited **$${amount}** into your bank!`);
     } catch (err) {
       console.log(err);
     }
