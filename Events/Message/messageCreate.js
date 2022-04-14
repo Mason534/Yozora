@@ -87,6 +87,18 @@ module.exports = {
             .setDescription(`An error happened while trying to run this command, please contact staff about the issue!`)
             message.channel.send({embeds: [ErrorEmbed]});
         };
+
+        var date;
+
+        if (command.name == 'clockin') {
+        global.date = new Date();
+        message.reply("You're clocked in! Remember to clockout at the end of your duty. \n **Don't run this command before clocking out as your time will reset!**");
+        }
+
+        if (command.name == 'clockout') {
+         let result = require('pretty-ms') (global.date ? (new Date() - global.date) : 0);
+        message.reply(`Your clocked time results at ${result}!`);
+        }   
     }
 }
 
