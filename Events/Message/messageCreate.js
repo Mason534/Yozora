@@ -21,6 +21,7 @@ module.exports = {
         serverID: message.guild.id,
         coins: 0,
         bank: 0,
+        //inventory: 0,
       });
       profile.save();
     }
