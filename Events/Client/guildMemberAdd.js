@@ -6,7 +6,7 @@ module.exports = async (client, discord, member) => {
     serverID: member.guild.id,
     coins: 0,
     bank: 0,
-    //inventory: 0,
+    inventory: []
   });
   profile.save();
 };

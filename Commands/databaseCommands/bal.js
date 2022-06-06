@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const profileModel = require("../../Models/profileSchema");
 
 module.exports = {
     name: "balance",
@@ -7,9 +8,9 @@ module.exports = {
     description: "Check the user balance",
     async execute(message, args, commandName, client, Discord, profileData) {
         
+        const target = message.mentions.users.first();
         const Wallet = profileData.coins
-        const Bank = profileData.bank
-
+        const Bank   = profileData.bank
 
         const Response = new MessageEmbed()
         .setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
@@ -24,6 +25,7 @@ module.exports = {
         value: `You have **$${Bank}**`,
         inline: true
     }]);
+    if (!target) return message.channel.send({embeds: [Response]})
     message.channel.send({embeds: [Response]})
 
     },

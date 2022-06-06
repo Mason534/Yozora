@@ -1,4 +1,4 @@
-const { Client, Message, MessageEmbed, Collection } = require('discord.js');
+const { Client, Message, MessageEmbed, Collection, Interaction } = require('discord.js');
 const { Prefix } = require('../../config.json');
 const profileModel = require("../../Models/profileSchema");
 
@@ -8,6 +8,7 @@ module.exports = {
      * @param {Client} client
      * @param {Message} message 
      */
+
     async execute(message, client, Discord) {
 
         if (!message.content.startsWith(Prefix) || message.author.bot) return;
@@ -21,7 +22,7 @@ module.exports = {
         serverID: message.guild.id,
         coins: 0,
         bank: 0,
-        //inventory: 0,
+        inventory: []
       });
       profile.save();
     }
