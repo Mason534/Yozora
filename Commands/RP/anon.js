@@ -16,10 +16,11 @@ module.exports = {
           }, 100)
 
         let suggestembed = new Discord.MessageEmbed()
-        .setTitle('**__Protected Message__**')
+        .setTitle('**__Encrypted Message__**')
         .setDescription(`${suggestmessage}`)
         .setColor("FF6F52")
+        .setFooter("CyberGhostVPN")
         
-        channel.send({embeds: [suggestembed]});
+        message.channel.send({embeds: [suggestembed]});
     }
 };
