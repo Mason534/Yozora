@@ -25,7 +25,7 @@ module.exports = {
 	      .setTimestamp(message.createdTimestamp)
         
         
-        let msg = await channel.send({embeds: [Response]});
+        let msg = await message.channel.send({embeds: [Response]});
 
         msg.react("👍");
         msg.react("👎");
