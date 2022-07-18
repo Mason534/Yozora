@@ -15,6 +15,9 @@ module.exports = {
         return message.channel.send('Please choose someone to text!')
 
         const LF = (args.slice('').join(" "))
+        setTimeout(function() {
+          message.delete()
+        }, 500)
         
         const Response = new MessageEmbed()
         .setColor('GREEN')
@@ -31,8 +34,6 @@ module.exports = {
         Target.createDM().then(ch => {
           ch.send({ embeds: [Response] })
         });
-
-        message.channel.delete
 
         message.channel.send({
           content: `Your text was sent via DMs to ${Target}`,
