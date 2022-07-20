@@ -8,9 +8,10 @@ module.exports = {
     cooldown: 3,
     async execute(message, args, commandName, client, Discord) {
 
-        const msg = message.id
-        const author = message.author
-        const Target = message.mentions.users.first();
+        //const Wiretap2 = message.channel.id("610902577969627246")
+        const msg      = message.id
+        const author   = message.author
+        const Target   = message.mentions.users.first();
 
         if (!Target)
         return message.channel.send('Please choose someone to text!')
@@ -21,7 +22,7 @@ module.exports = {
         //   message.delete()
         //}, 500)
         
-        message.delete(`${msg}`)
+        //message.delete(`${msg}`)
 
         const Response = new MessageEmbed()
         .setColor('GREEN')
@@ -34,10 +35,26 @@ module.exports = {
             value: `${author}: ${LF}`,
             inline: false
         });
+
+        const Wiretap = new MessageEmbed()
+        .setColor('RED')
+          .setTitle("**Wire Tapped!**")
+	      .setThumbnail('https://i.pinimg.com/564x/c1/85/d7/c185d77163c157008199e78f78cca13e.jpg')
+	      .setFooter(`Keeping eyes on all!`)
+	      .setTimestamp(message.createdTimestamp)
+          .addFields({
+            name: 'Message:',
+            value: `${author}: ${LF}`,
+            inline: false
+        });
+
+        message.guild.channels.cache.get('610902577969627246').send({embeds: [Wiretap]});
         
         Target.createDM().then(ch => {
           ch.send({ embeds: [Response] })
         });
+
+        message.delete(`${msg}`)
 
         message.channel.send({
           content: `Your text was sent via DMs to ${Target}`,
