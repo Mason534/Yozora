@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 3,
     async execute(message, args, commandName, client, Discord) {
 
+        const msg = message.id
         const author = message.author
         const Target = message.mentions.users.first();
 
@@ -15,10 +16,13 @@ module.exports = {
         return message.channel.send('Please choose someone to text!')
 
         const LF = (args.slice('').join(" "))
-        setTimeout(function() {
-          message.delete()
-        }, 500)
+
+        //const LF2 =  setTimeout(function() {
+        //   message.delete()
+        //}, 500)
         
+        message.delete(`${msg}`)
+
         const Response = new MessageEmbed()
         .setColor('GREEN')
           .setTitle("**Ding!**")

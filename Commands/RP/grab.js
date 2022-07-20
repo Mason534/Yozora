@@ -12,7 +12,7 @@ module.exports = {
         const Target = message.mentions.users.first();
 
         if (!Target)
-        return message.channel.send('Please choose someone to grab!')
+        return //message.channel.send('Please choose someone to grab!')
 
         message.reply(`${author} has grabbed ${Target}!`)
 
