@@ -4,7 +4,7 @@ module.exports = {
     name: 'hotwire',
     aliases: [''],
     permissions: 'SEND_MESSAGES',
-    description: "fueles car",
+    description: "fuels car",
     cooldown: 3,
     execute(message, args, commandName, client, Discord) {
         const Target = message.author;
