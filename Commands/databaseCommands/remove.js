@@ -5,12 +5,13 @@ const ProfileModels = require('../../Models/profileSchema')
 const profileData = require('../../Events/Message/messageCreate')
 
 module.exports = {
-     name: 'add',
-     category: 'adds to your inv',
+     name: 'remove',
+     category: 'removes from your inv',
         
     async execute(message, args, commandName, client, Discord, profileData) {
         let item = items.itemList.map(x => x.name);
-        let addItem = item[Math.floor(Math.random() * item.length)];
+        let addItem = args.slice().join(' ');
+
 
         function getCount(_id){
             let count;
@@ -21,17 +22,16 @@ module.exports = {
                     return;
                 }
             }); 
-            count - count + 1;
+            count = count - 1;
             return count;
         }
          if(!profileData.inventory.find(itemName => itemName._id === addItem)){
-            profileData.inventory.push({_id: addItem, count: 1});
-            profileData.save();
+            return message.reply("You do not have this item");
         }else{
             let counter = getCount(addItem);
             await ProfileModels.findOneAndUpdate({
                 userId: message.author.id, 
-                "inventory._id": addItem
+                "inventory._id": addItem 
             }, {
                 $set: {
                     "inventory.$.count": counter
@@ -39,6 +39,6 @@ module.exports = {
             })
         }
 
-            message.reply(`Added ${addItem} to your inventory`);
+            message.reply(`Removed ${addItem} from your inventory`);
         }
     }

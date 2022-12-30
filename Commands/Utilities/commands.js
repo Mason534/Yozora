@@ -42,11 +42,11 @@ module.exports = {
         inline: true
     }, {
         name: 'Other',
-        value: ' `bot` `av` ` serverinfo` `whois` `suggest (text)` ',
+        value: ' `bot` `av` `complaint` `serverinfo` `whois` `suggest (text)` ',
         inline: true
     }, {
         name: 'Roleplay commands',
-        value: ' `aid` `anon` `bcamon` `bcamoff` `crouch` `cuff` `cpr` `defib` `dfuel` `do(message)` `drink` `eat` `engine/eng` `engoff` `examine` `fuel` `grab` `hotwire` `lock` `post` `pfuel` `preflight` `radar` `seatbelt` `smoke` `text (@) (message)` `tow` `uncuff` `unzip` `zip`',
+        value: ' `aid` `anon` `bcamon` `bcamoff` `charge` `crouch` `cuff` `cpr` `defib` `dfuel` `do(message)` `drink` `eat` `engine/eng` `engoff` `examine` `fuel` `grab` `hotwire` `lock` `post` `pfuel` `preflight` `radar` `seatbelt` `smoke` `text (@) (message)` `tow` `uncuff` `unzip` `zip`',
         inline: true
     }]);
 

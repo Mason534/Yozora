@@ -28,7 +28,7 @@ module.exports = {
 
         }, 5000)
 
-        setInterval(() => {
+       setInterval(() => {
             test.send({embeds: [Response]})
         }, 18000000);
 

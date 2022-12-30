@@ -9,6 +9,6 @@ module.exports = {
     execute(message, args, commandName, client, Discord) {
         const Target = message.mentions.users.first() || message.author;
 
-        message.reply(`${Target} is now zipties! Uh oh`)
+        message.reply(`${Target} is now ziptied! Uh oh`)
 
     }}
