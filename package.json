@@ -21,6 +21,7 @@
     "moment": "^2.29.1",
     "mongoose": "^6.2.9",
     "pretty-ms": "^7.0.1",
-    "simply-djs": "^2.0.9"
+    "simply-djs": "^2.0.9",
+    "ws": "^8.11.0"
   }
 }
