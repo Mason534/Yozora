@@ -22,7 +22,7 @@ module.exports = {
                     invEmbed.addField(`items`, `${invItems}`, true);
                 }
             }else{
-                invEmbed.addField('You have nothing', "in your invevtory!");
+                invEmbed.addField('You have nothing', "in your inventory!");
             }
             message.reply({embeds: [ invEmbed ]});
         }catch(err){
