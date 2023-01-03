@@ -5,7 +5,7 @@ const ProfileModels = require('../../Models/profileSchema')
 const profileData = require('../../Events/Message/messageCreate')
 
 module.exports = {
-     name: 'clear',
+     name: 'remove',
      category: 'removes from your inv',
         
     async execute(message, args, commandName, client, Discord, profileData) {
@@ -13,7 +13,7 @@ module.exports = {
         let addItem = args.slice().join(' ');
 
 
-        function getCount(_id){
+        /*function getCount(_id){
             let count;
             profileData.inventory.find(itemName => {
                 if(itemName._id === _id){
@@ -25,9 +25,9 @@ module.exports = {
             count = count - 1;
             return count;
         }
-        /* if(!profileData.inventory.find(itemName => itemName._id === addItem)){
+         */if(!profileData.inventory.find(itemName => itemName._id === addItem)){
             return message.reply("You do not have this item");
-        }else*/{
+        }else{ 
             profileData.inventory.pull({ _id: addItem, count: 1});
             profileData.save();
             /*let counter = getCount(addItem);
@@ -42,6 +42,6 @@ module.exports = {
             })
         }*/
 
-            message.reply(`Your inventory has been cleared!`);
+            message.reply(`Removed ${addItem} from your inventory`);
         }
     }}
