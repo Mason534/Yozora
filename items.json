@@ -1,8 +1,8 @@
 {
     "itemList": [
-        {"name": "knife"},
-        {"name": "flashlight"},
-        {"name": "wallet"},
-        {"name": "Illegal Pistol"}
+        {"name": "Tobacco License"},
+        {"name": "Food Permit"},
+        {"name": "Liquor License"},
+        {"name": "Security License"}
     ]
 }

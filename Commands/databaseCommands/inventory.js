@@ -7,6 +7,9 @@ module.exports = {
     description: "Check the user inventory",
     async execute(message, args, commandName, client, Discord, profileData) {
 
+        const target = message.mentions.users.first() || message.author;
+        const user = await profileModel.findOne({ userID: target.id });
+
         if(!profileData) return message.reply('I have created a profile for you!');
 
         try{
@@ -19,7 +22,9 @@ module.exports = {
                 var invItems = createinv(invArr).join("\n");
 
                 if(profileData.inventory.length){
-                    invEmbed.addField(`items`, `${invItems}`, true);
+                    invEmbed.setThumbnail(target.displayAvatarURL({dynamic: true}))
+                    invEmbed.addField(`Items`, `${invItems}`, true);
+                    invEmbed.addField(`Wallet`, `${user.coins}`, true);
                 }
             }else{
                 invEmbed.addField('You have nothing', "in your inventory!");

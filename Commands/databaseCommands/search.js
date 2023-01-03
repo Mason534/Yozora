@@ -22,7 +22,9 @@ module.exports = {
                 var invItems = createinv(invArr).join("\n");
 
                 if(user.inventory.length){
-                    invEmbed.addField(`items`, `${invItems}`, true);
+                    invEmbed.setThumbnail(target.displayAvatarURL({dynamic: true}))
+                    invEmbed.addField(`Items`, `${invItems}`, true);
+                    invEmbed.addField(`Wallet`, `${user.coins}`, true);
                 }
             }else{
                 invEmbed.addField('You have nothing', "in your invevtory!");
