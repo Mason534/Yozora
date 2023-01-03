@@ -11,6 +11,7 @@ module.exports = {
     async execute(message, args, commandName, client, Discord, profileData) {
         let test = args.slice().join(' '); 
         let item = items.itemList.map(test => test.name);
+        let addItem = profileData.licenses.find(itemName => itemName._id === addItem);
 
         function getCount(_id){
             let count;
