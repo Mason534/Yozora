@@ -25,9 +25,9 @@ module.exports = {
             count = count - 1;
             return count;
         }
-         if(!profileData.inventory.find(itemName => itemName._id === addItem)){
+        /* if(!profileData.inventory.find(itemName => itemName._id === addItem)){
             return message.reply("You do not have this item");
-        }else{
+        }else*/{
             profileData.inventory.pull({ _id: addItem, count: 1});
             profileData.save();
             /*let counter = getCount(addItem);
@@ -42,6 +42,6 @@ module.exports = {
             })
         }*/
 
-            message.reply(`Removed ${addItem} from your inventory`);
+            message.reply(`Your inventory has been cleared!`);
         }
     }}
