@@ -24,7 +24,7 @@ module.exports = {
                 if(profileData.inventory.length){
                     invEmbed.setThumbnail(target.displayAvatarURL({dynamic: true}))
                     invEmbed.addField(`Items`, `${invItems}`, true);
-                    invEmbed.addField(`Wallet`, `${user.coins}`, true);
+                    invEmbed.addField(`Wallet`, `$${user.coins}`, true);
                 }
             }else{
                 invEmbed.addField('You have nothing', "in your inventory!");
