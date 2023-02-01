@@ -6,7 +6,7 @@ const profileSchema = new mongoose.Schema({
   coins: { type: Number, default: 0 },
   bank: { type: Number },
   inventory: [{_id: String, count: Number }],
-  licenses: [{ _id: String }]
+  licenses:  [{_id: String, count: Number }]
 
 });
 
