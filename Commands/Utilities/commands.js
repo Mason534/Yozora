@@ -50,7 +50,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Database commands',
-        value: ' `bal` `pay` `withdraw` `deposit` `inv` `search @` `add` `remove` ',
+        value: ' `bal` `pay` `withdraw` `deposit` `inv` `search @` `add` `remove` `licenses` ',
         inline: true
     }]);
 

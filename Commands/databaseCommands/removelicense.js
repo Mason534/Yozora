@@ -14,10 +14,11 @@ module.exports = {
         let item = items.itemList.map(x => x.name);
         let addItem = args.slice().join(' ');
 
-        //if(!message.member.roles.cache.has('565275714035646475'))
-            //return (message.reply('You need to be a Solaris staff member to use this!'));
+        if(!message.member.roles.cache.has('565275714035646475'))
+            return (message.reply('You need to be a Solaris staff member to use this!'));
 
-        //else
+        else
+        
         if(!user.licenses.find(itemName => itemName._id === addItem)){
             return message.reply("You do not have this item");
         }else{ 

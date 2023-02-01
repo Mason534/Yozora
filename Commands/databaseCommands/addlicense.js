@@ -12,6 +12,11 @@ module.exports = {
         let item = items.itemList.map(x => x.name);
         let addItem = args.slice().join(' ');
 
+        if(!message.member.roles.cache.has('565275714035646475'))
+            return (message.reply('You need to be a Solaris staff member to use this!'));
+
+        else
+
         function getCount(_id){
             let count;
             profileData.licenses.find(itemName => {
