@@ -9,6 +9,9 @@ module.exports = {
      category: 'adds to your inv',
         
      async execute(message, args, commandName, client, Discord, profileData) {
+        const target = message.mentions.users.first() || message.author;
+        const user = await ProfileModels.findOne({ userID: target.id });
+
         let item = items.itemList.map(x => x.name);
         let addItem = args.slice().join(' ');
 
@@ -19,7 +22,7 @@ module.exports = {
 
         function getCount(_id){
             let count;
-            profileData.licenses.find(itemName => {
+            user.licenses.find(itemName => {
                 if(itemName._id === _id){
                     count = parseInt(itemName.count);
                 }else{
@@ -29,9 +32,9 @@ module.exports = {
             count - count + 1;
             return count;
         }
-         if(!profileData.licenses.find(itemName => itemName._id === addItem)){
-            profileData.licenses.push({_id: addItem, count: 1});
-            profileData.save();
+         if(!user.licenses.find(itemName => itemName._id === addItem)){
+            user.licenses.push({_id: addItem, count: 1});
+            user.save();
         }else{
             let counter = getCount(addItem);
             await ProfileModels.findOneAndUpdate({

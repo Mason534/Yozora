@@ -11,6 +11,7 @@ module.exports = {
     async execute(message, args, commandName, client, Discord, profileData) {
         const target = message.mentions.users.first() || message.author;
         const user = await ProfileModels.findOne({ userID: target.id });
+
         let item = items.itemList.map(x => x.name);
         let addItem = args.slice().join(' ');
 
