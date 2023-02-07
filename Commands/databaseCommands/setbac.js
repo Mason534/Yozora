@@ -1,22 +1,14 @@
 const profileModel = require("../../Models/profileSchema");
 module.exports = {
-  name: "give",
+  name: "setbac",
   aliases: [],
   permissions: [],
   description: "give a player some cash",
   async execute(message, args, cmd, client, discord, profileData) {
-    const role = message.guild.roles.cache.find(r => r.id === "565275714035646475" );
-
-        const User = message.author;
-        if(!message.member.roles.cache.has("565275714035646475"))
-            return (message.reply(`You're not allowed to use this command!`));
-
-            else
-            !message.member.roles.cache.has(role)
 
     if (!args.length) return message.channel.send("You need to mention a player to give them coins");
-    const amount = args[1];
-    const target = message.mentions.users.first();
+    const amount = args[0];
+    const target = message.author;
     if (!target) return message.channel.send("That user does not exist");
 
     
@@ -30,13 +22,13 @@ module.exports = {
           userID: target.id,
         },
         {
-          $inc: {
-            coins: amount,
+          $set: {
+            bac: amount,
           },
         }
       );
 
-      return message.channel.send(`This player has been given ${amount} of cash!`);
+      return message.reply(`**BAC set** :saluting_face:`);
     } catch (err) {
       console.log(err);
     }
