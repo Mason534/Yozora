@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`If you do not buy the merch, you will be scolded by Alfie! \nClick here to go to the [Merch](https://shop.spreadshirt.net/solaris-roleplay/)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

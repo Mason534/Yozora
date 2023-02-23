@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`If you do not follow the Job manual, you will be warned! \nClick here to go to the [Job Manual](https://docs.google.com/document/d/1csTKBt4BPvcSFNGYIEMfmQ6o7MMXMpGuZaihnFRe3dY/edit?usp=sharing)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

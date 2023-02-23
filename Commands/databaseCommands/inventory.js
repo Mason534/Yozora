@@ -25,6 +25,7 @@ module.exports = {
                 var lItems = createl(lArr).join("\n");
 
                 if(profileData.inventory.length){
+                    invEmbed.setColor('PURPLE');
                     invEmbed.setThumbnail(target.displayAvatarURL({dynamic: true}))
                     invEmbed.addField(`Items`, `${invItems}`, true);
                     invEmbed.addField(`Licenses`, ` Driver's License \n ${lItems}`, true);

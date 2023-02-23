@@ -8,7 +8,7 @@ module.exports = {
         const Target = message.mentions.users.first() || message.author;
 
         const Response = new MessageEmbed()
-        .setColor('FF6F52')
+        .setColor('PURPLE')
         .setAuthor(`${Target.tag}\'s Avatar`)
         .setImage(Target.displayAvatarURL({dynamic: true}))
         .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({dynamic: true}))

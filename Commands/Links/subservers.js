@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`These are our Sub Servers! \nClick here to go to the [Solaris Military Server](https://discord.gg/Uhwc8PKGgB) \nClick here to go to the [Solaris Gaming Server](https://discord.gg/JDD9EAh)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

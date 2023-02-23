@@ -78,7 +78,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`**Guild information for __${message.guild.name}__**`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was buzzed in by ${message.author.username}`)
+	.setFooter(`Yozora was buzzed in by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Server name',

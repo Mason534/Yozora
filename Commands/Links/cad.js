@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`The Solaris CAD hosts everything about our daily lives in sessions! \nClick here to go to the [CAD](https://app.sonorancad.com/#/community/menu)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

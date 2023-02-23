@@ -8,21 +8,19 @@ module.exports = {
     cooldown: 10,
     execute(message, args, commandName, client, Discord) {
         const Response = new MessageEmbed()
-        .setColor('FF6F52')
-	.setTitle('Bot Information Embed!')
-	.setURL('https://docs.google.com/document/d/11G57MPT2dfxiVUyfw8krzCxG_2AyReedWia3hRUA7VY/edit')
+        .setColor('PURPLE')
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
-	.setDescription(`This is an embed for the bot's information.\n Only use this Bot in the Bot Commands channel.\nhere is the Solaris Manual link: [Click here](https://docs.google.com/document/d/11G57MPT2dfxiVUyfw8krzCxG_2AyReedWia3hRUA7VY/edit)`)
+	.setDescription(`This bot is a tool your server can use in for your Roleplaying needs. This bot has been in dev since October 2021.`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Bot name',
-        value: 'Solaris Bot',
+        value: 'Yozora',
         inline: true
     }, {
         name: 'Bot Version',
-        value: '2.1.0',
+        value: '3.0.0',
         inline: true
     }, {
         name: 'Bot Status',

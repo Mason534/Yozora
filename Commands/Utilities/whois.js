@@ -30,7 +30,7 @@ module.exports = {
         const Response = new MessageEmbed()
         .setAuthor(`${Target.username}`, Target.displayAvatarURL({dynamic: true}))
         .setThumbnail(Target.displayAvatarURL({dynamic: true}))
-        .setColor("FF6F52")
+        .setColor("PURPLE")
         .addField("Member" , `${Target} `, false)
         //.addField("Roles" , `${roless}`)
         .addField('Amount of Server Roles', `${Member.roles.cache.size}`)

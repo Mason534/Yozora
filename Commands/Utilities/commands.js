@@ -20,25 +20,13 @@ module.exports = {
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
 	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
 	.setTimestamp(message.createdTimestamp)
-    .addFields([{
-        name: 'Link-list',
-        value: ' `rules` `manual` `civranks` `jobs` `merch` `website` `cad` `penalcodes` `civapps` `vip` `masterlink`',
-        inline: true
-    }, { 
+    .addFields([{ 
         name: 'Text-List',
         value: ' `ping` ` getstaffrole` `say` ',
         inline: true
     }, {
         name: 'Games',
-        value: ' `hack (mention)` `activity (name)` `meme` ',
-        inline: true
-    }, {
-        name: 'Solaris Socials',
-        value: ' `instagram` `tiktok` ',
-        inline: true
-    }, {
-        name: 'Solaris Sub-Servers',
-        value: ' `subservers` ',
+        value: ' `hack (mention)` `meme` ',
         inline: true
     }, {
         name: 'Other',

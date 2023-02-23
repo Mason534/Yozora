@@ -37,7 +37,7 @@ module.exports = {
             .setTitle(("Question of the Day!"))
         .setDescription(`${status}`)
         .setColor('YELLOW')
-        .setFooter("If you'd like your own QOTD in the list, please contact staff!")
+        .setFooter("If you'd like your own QOTD in the list, please contact staff! || Creator knarFennA#6313")
         message.channel.send({embeds: [embed]})
         }, 86400000)
     }

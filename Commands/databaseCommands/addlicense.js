@@ -11,13 +11,14 @@ module.exports = {
      async execute(message, args, commandName, client, Discord, profileData) {
         const target = message.mentions.users.first() || message.author;
         const user = await ProfileModels.findOne({ userID: target.id });
+        const role = ("791869152377176095" || "565275714035646475");
 
         let item = items.itemList.map(x => x.name);
         let addItem = args.slice().join(' ');
 
-        if(!message.member.roles.cache.has('565275714035646475'))
-            return (message.reply('You need to be a Solaris staff member to use this!'));
-
+        if(!message.member.roles.cache.has(role)) {
+            return (message.reply('You need to be a staff member to use this!'));
+        }
         else
 
         function getCount(_id){

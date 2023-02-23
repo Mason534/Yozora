@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`If you do not follow the Civ ranks, you will be warned! \nClick here to go to the [Civilian Ranks](https://docs.google.com/document/d/1SA-loMRUM4-Ivcm3dN-242Qqfyxjb0qzQXpkmEQ1ROQ/edit)\nClick here for mobile version! [Civilian Ranks](https://docs.google.com/document/u/0/d/1SA-loMRUM4-Ivcm3dN-242Qqfyxjb0qzQXpkmEQ1ROQ/mobilebasic)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

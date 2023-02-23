@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`If you do not follow the rules listed below, you will be warned!`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
     .addFields([{
         name: 'Rule 1', value: 'Not-Safe-For-Work content is strictly prohibited. This includes text messages, voice messages and/or video files or streaming.',

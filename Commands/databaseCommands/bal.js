@@ -14,8 +14,8 @@ module.exports = {
 
         const Response = new MessageEmbed()
         .setAuthor(target.username, target.avatarURL({dynamic: true}))
-        .setColor('ORANGE')
-	    .setFooter(`Your Balances are up to date!`)
+        .setColor('PURPLE')
+	    .setFooter(`Your Balances are up to date! || Creator knarFennA#6313`)
         .setThumbnail("https://i.pinimg.com/originals/dc/9e/be/dc9ebe27d89cc4f8b8c77fb0d6871f63.jpg")
 	    .setTimestamp(message.createdTimestamp)
       .addFields([{

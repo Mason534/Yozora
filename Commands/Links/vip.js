@@ -14,7 +14,7 @@ module.exports = {
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`The VIP Manual shows all the information regarding VIP ranks. \nClick here to go to the [VIP Manual](https://docs.google.com/document/d/149MMlpxMVgHNKCW-rG2BdCJy8uIlihHX0GZkjM4S3Uw/edit?usp=sharing)`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
         message.channel.send({embeds: [Response]})
     }

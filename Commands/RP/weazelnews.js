@@ -18,7 +18,7 @@ module.exports = {
         .setColor('RED')
 	    .setDescription(`${message.author}: ${LF}`)
 	    .setThumbnail('https://static.wikia.nocookie.net/nopixel/images/3/3e/Weazelnews.jpg/revision/latest/scale-to-width-down/350?cb=20190719014909')
-	    .setFooter(`Reporting the right news!`)
+	    .setFooter(`Reporting the right news! || Creator knarFennA#6313`)
 	    .setTimestamp(message.createdTimestamp)
         
         

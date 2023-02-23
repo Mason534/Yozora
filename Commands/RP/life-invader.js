@@ -19,7 +19,7 @@ module.exports = {
         .setColor('RED')
 	      .setDescription(`${message.author}: ${LF}`)
 	      .setThumbnail('http://cdn.themis-media.com/media/global/images/library/deriv/595/595961.jpg')
-	      .setFooter(`Life-Invader, it's tech, it's your life!`)
+	      .setFooter(`Life-Invader, it's tech, it's your life! || Creator knarFennA#6313`)
 	      .setTimestamp(message.createdTimestamp)
         
         
