@@ -12,13 +12,13 @@ module.exports = {
             return (message.reply('You do not have the correct roles to use this command!'))
         } else {
         const Response = new MessageEmbed()
-    .setColor('FF6F52')
+    .setColor('PURPLE')
 	.setTitle('Bot Command List')
 	.setURL('https://ardenloncke.wixsite.com/solaris-rp')
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`Don't forget to use the prefix "-" before using a command!`)
 	.setThumbnail(client.user.avatarURL({dynamic: true }))
-	.setFooter(`Solaris Bot was called upon by ${message.author.username}`)
+	.setFooter(`Yozora was called upon by ${message.author.username} || Creator knarFennA#6313`)
 	.setTimestamp(message.createdTimestamp)
     .addFields([{ 
         name: 'Text-List',

@@ -73,7 +73,7 @@ module.exports = {
 		const emojis = message.guild.emojis.cache;
 
         const Response = new MessageEmbed()
-        .setColor('FF6F52')
+        .setColor('PURPLE')
 	.setTitle('Server Info')
 	.setAuthor(message.author.username, message.author.avatarURL({dynamic: true}))
 	.setDescription(`**Guild information for __${message.guild.name}__**`)
