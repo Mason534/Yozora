@@ -17,7 +17,7 @@ module.exports = {
         if(!user) {
             message.reply(`${target} does not have any levels yet, try again later!`);
         }
-         const rank = new canvacord.Rank()
+         /*const rank = new canvacord.Rank()
             .setAvatar(target.displayAvatarURL({ size: 256 }))
             .setLevel(user.level)
             .setCurrentXP(user.xp)
@@ -30,6 +30,24 @@ module.exports = {
          message.channel.send( { 
             content: `Congratulations ${target} on reaching **${user.xp} xp!**`,
             files: [await rank.build()]
-         } )
+         } )*/
+
+         const Response = new MessageEmbed()
+         .setAuthor(target.username, target.avatarURL({dynamic: true}))
+         .setColor('PURPLE')
+         .setDescription(`**You need ${calculateLevelXP(user.level) - user.xp} more xp to advance to level ${user.level + 1}!**`)
+         .setFooter(`LEVEL UP! || Creator knarFennA#6313`)
+         .setTimestamp(message.createdTimestamp)
+       .addFields([{
+         name: 'XP',
+         value: `You have **${user.xp} XP!**`
+     }, { 
+         name: 'Level',
+         value: `You are level **${user.level}!**`,
+         inline: true
+     }]);
+
+        message.reply({embeds: [Response]});
+
         }
     }
