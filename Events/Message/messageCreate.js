@@ -21,6 +21,7 @@ module.exports = {
 
     async execute(message, client, Discord) {
 
+        const channel1 = message.guild.channels.cache.get('611829474261991434');
         if (message.author.bot || cooldown.has(message.author.id)) return;
 
         const xpToGive = getRandomXp(5, 15);
@@ -42,8 +43,6 @@ module.exports = {
       });
       profile.save();
 
-      cooldown.add(message.author.id);
-     setTimeout(() => { cooldown.delete(message.author.id) }, 60000);
 
     } else if (profileData){
         profileData.xp += xpToGive;
@@ -55,8 +54,7 @@ module.exports = {
             message.channel.send(`${message.author} you have leveled up to **level ${profileData.level}**.`)
          }
          await profileData.save().catch((e) => { console.log(`Error`); return;})
-         cooldown.add(message.author.id);
-         setTimeout(() => { cooldown.delete(message.author.id) }, 60000);
+         
     }
 
   } catch (err) {
