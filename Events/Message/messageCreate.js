@@ -1,6 +1,15 @@
 const { Client, Message, MessageEmbed, Collection, Interaction } = require('discord.js');
 const { Prefix } = require('../../config.json');
-const profileModel = require("../../Models/profileSchema");
+const profileModel = require('../../Models/profileSchema');
+const cooldown = new Set();
+const calculateLevelXp = require('../../Models/calculateLevelXP');
+
+
+function getRandomXp(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) +min;
+}
 
 module.exports = {
     name: "messageCreate",
@@ -9,9 +18,12 @@ module.exports = {
      * @param {Message} message 
      */
 
+
     async execute(message, client, Discord) {
 
-        if (!message.content.startsWith(Prefix) || message.author.bot) return;
+        if (message.author.bot || cooldown.has(message.author.id)) return;
+
+        const xpToGive = getRandomXp(5, 15);
 
         let profileData;
   try {
@@ -20,15 +32,38 @@ module.exports = {
       let profile = await profileModel.create({
         userID: message.author.id,
         serverID: message.guild.id,
+        xp: 0,
+        level: 0,
         coins: 0,
         bank: 0,
-        inventory: []
+        inventory: [],
+        licenses: [],
+        bac: 0
       });
       profile.save();
+
+      cooldown.add(message.author.id);
+     setTimeout(() => { cooldown.delete(message.author.id) }, 60000);
+
+    } else if (profileData){
+        profileData.xp += xpToGive;
+
+        if (profileData.xp > calculateLevelXp(profileData.level)) { 
+            profileData.xp = 0;
+            profileData.level += 1;
+
+            message.channel.send(`${message.author} you have leveled up to **level ${profileData.level}**.`)
+         }
+         await profileData.save().catch((e) => { console.log(`Error`); return;})
+         cooldown.add(message.author.id);
+         setTimeout(() => { cooldown.delete(message.author.id) }, 60000);
     }
+
   } catch (err) {
     console.log(err);
   }
+
+        if (!message.content.startsWith(Prefix) || message.author.bot) return;
         
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const commandName = args.shift().toLowerCase();
@@ -92,15 +127,7 @@ module.exports = {
 
         var date;
 
-        if (command.name == 'clockin') {
-        global.date = new Date();
-        message.reply("You're clocked in! Remember to clockout at the end of your duty. \n **Don't run this command before clocking out as your time will reset!**");
-        }
-
-        if (command.name == 'clockout') {
-         let result = require('pretty-ms') (global.date ? (new Date() - global.date) : 0);
-        message.reply(`Your clocked time results at ${result}!`);
-        }   
+        
     }
 }
 

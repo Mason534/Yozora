@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js")
 const profileModel = require("../../Models/profileSchema");
 module.exports = {
     name: "bac",
-    aliases: [""],
+    aliases: ["none"],
     permissions: [],
     description: "Check the user inventory",
     async execute(message, args, commandName, client, Discord, profileData) {
