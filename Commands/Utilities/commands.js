@@ -34,14 +34,13 @@ module.exports = {
         inline: true
     }, {
         name: 'Roleplay commands',
-        value: ' `aid` `anon` `bcamon` `bcamoff` `charge` `crouch` `cuff` `cpr` `defib` `dfuel` `do(message)` `drink` `eat` `engine/eng` `engoff` `examine` `fuel` `grab` `hotwire` `lock` `post` `pfuel` `preflight` `radar` `roll` `seatbelt` `smoke` `text (@) (message)` `tow` `uncuff` `unzip` `zip`',
+        value: ' `aid` `anon` `bcamon` `bcamoff` `charge` `crouch` `cuff` `cpr` `defib` `dfuel` `do(message)` `drink` `eat` `engine/eng` `engoff` `examine` `fuel` `grab` `hfuel` `hotwire` `lock` `post` `pfuel` `preflight` `radar` `roll` `seatbelt` `smoke` `text (@) (message)` `tow` `uncuff` `unzip` `zip`',
         inline: true
     }, {
         name: 'Database commands',
         value: ' `bal` `pay` `withdraw` `deposit` `inv` `search @` `add` `remove` `licenses` `bac @` `setbac` ',
         inline: true
     }]);
-
         message.channel.send({embeds: [Response]})
     }
 }}

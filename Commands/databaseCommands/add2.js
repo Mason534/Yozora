@@ -10,7 +10,7 @@ module.exports = {
         
     async execute(message, args, commandName, client, Discord, profileData) {
         let item = items.itemList.map(x => x.name);
-        let addItem = args.slice().join(' ');
+        let addItem = args.slice().join(' ').toLowerCase();
 
         function getCount(_id){
             let count;

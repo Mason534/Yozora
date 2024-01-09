@@ -50,8 +50,10 @@ module.exports = {
         if (profileData.xp > calculateLevelXp(profileData.level)) { 
             profileData.xp = 0;
             profileData.level += 1;
-
-            chan.send(`${message.author} you have leveled up to **level ${profileData.level}**.`)
+            
+            if(profileData.level >= 2){
+            chan.send(`${message.author} you have leveled up to **level ${profileData.level}**.`);
+            }
          }
          await profileData.save().catch((e) => { console.log(`Error`); return;})
          

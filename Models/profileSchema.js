@@ -6,12 +6,14 @@ const profileSchema = new mongoose.Schema({
   xp: { type: Number, default: 0 },
   level: { type: Number, default: 0 },
   coins: { type: Number, default: 0 },
-  bank: { type: Number },
+  bank: { type: Number, default: 100 },
   inventory: [{_id: String, count: Number }],
   licenses:  [{_id: String, count: Number }],
+  isCuffed: { type: Boolean, default: false },
   bac: { type: Number, default: 0.00 }
 });
 
 const model = mongoose.model("ProfileModels", profileSchema);
 
 module.exports = model;
+

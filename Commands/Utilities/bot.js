@@ -20,7 +20,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Bot Version',
-        value: '3.0.0',
+        value: '3.0.1',
         inline: true
     }, {
         name: 'Bot Status',

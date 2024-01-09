@@ -6,8 +6,14 @@ module.exports = {
     permissions: 'SEND_MESSAGES',
     description: "fuels car",
     cooldown: 3,
-    execute(message, args, commandName, client, Discord) {
+    async execute(message, args, commandName, client, Discord) {
         const Target = message.author;
+
+        const profileModel = require("../../Models/profileSchema");
+        const user = await profileModel.findOne({ userID: Target.id });
+        if(user.isCuffed){
+            return message.reply("You can't do this action while you're cuffed!");
+        } 
 
         message.reply("*Starting to hotwire, this is going take a minute!*")
         .then((msg) => {
