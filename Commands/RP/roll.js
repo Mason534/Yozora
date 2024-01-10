@@ -4,13 +4,21 @@ module.exports = {
     name: 'roll',
     aliases: [''],
     permissions: 'SEND_MESSAGES',
-    description: "rolls 0 - 20",
+    description: "rolls 1 - 20",
     cooldown: 3,
     execute(message, args, commandName, client, Discord) {
 
         const author = message.author;
-        const number = Math.floor(Math.random() * 21);
+        const dTwenty = Math.floor(Math.random() * 21) + 1;
+        const dOneHundred = Math.floor(Math.random() * 101) + 1;
 
-        message.reply(`${author} has rolled a **${number}!**`);
+        let str = args.slice();
 
+        if(str == "d20"){
+            message.reply(`${author} has rolled a **${dTwenty}!**`);
+        }
+
+        if(str == "d100"){
+            message.reply(`${author} has rolled a **${dOneHundred}!**`); 
+        }
     }}
