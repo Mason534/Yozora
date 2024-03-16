@@ -9,39 +9,17 @@ module.exports = {
      category: 'removes from your inv',
         
     async execute(message, args, commandName, client, Discord, profileData) {
-        let item = items.itemList.map(x => x.name);
-        let addItem = args.slice().join(' ').toLowerCase();
+        let addItem = args.join(' ').toLowerCase().trim();
+        let addItemArray = addItem.split(',').map(item => item.trim());
 
 
-        /*function getCount(_id){
-            let count;
-            profileData.inventory.find(itemName => {
-                if(itemName._id === _id){
-                    count = parseInt(itemName.count);
-                }else{
-                    return;
-                }
-            }); 
-            count = count - 1;
-            return count;
+        for(let i = 0; i < addItemArray.length; i++){
+            if(!profileData.inventory.find(itemName => itemName._id === addItemArray[i])){
+                return message.reply("You do not have this item");
+            }else{ 
+                profileData.inventory.pull({ _id: addItemArray[i], count: 1});
+            }
         }
-         */if(!profileData.inventory.find(itemName => itemName._id === addItem)){
-            return message.reply("You do not have this item");
-        }else{ 
-            profileData.inventory.pull({ _id: addItem, count: 1});
-            profileData.save();
-            /*let counter = getCount(addItem);
-            await ProfileModels.findOneAndUpdate({
-                userId: message.author.id, 
-                 
-                "inventory._id": addItem 
-            }, {
-                $unset: {
-                    "inventory.$.count": counter
-                }
-            })
-        }*/
-
-            message.reply(`Removed ${addItem} from your inventory`);
-        }
+        message.reply(`Removed ${addItemArray.join(', ')} from your inventory`);
+        profileData.save();
     }}

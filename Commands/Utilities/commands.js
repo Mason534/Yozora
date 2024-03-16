@@ -38,7 +38,7 @@ module.exports = {
         inline: true
     }, {
         name: 'Database commands',
-        value: ' `bal` `pay` `withdraw` `deposit` `inv` `search @` `add` `remove` `licenses` `bac @` `setbac` ',
+        value: ' `bal` `clearinv` `pay` `withdraw` `deposit` `inv` `search @` `add` `remove` `licenses` `bac @` `setbac` ',
         inline: true
     }]);
         message.channel.send({embeds: [Response]})

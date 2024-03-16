@@ -5,40 +5,40 @@ const ProfileModels = require('../../Models/profileSchema')
 const profileData = require('../../Events/Message/messageCreate')
 
 module.exports = {
-     name: 'add',
-     category: 'adds to your inv',
+    name: 'add',
+    category: 'adds to your inv',
         
     async execute(message, args, commandName, client, Discord, profileData) {
-        let item = items.itemList.map(x => x.name);
-        let addItem = args.slice().join(' ').toLowerCase();
+        let addItem = args.join(' ').toLowerCase().trim();
+        let addItemArray = addItem.split(',').map(item => item.trim());
 
-        function getCount(_id){
-            let count;
-            profileData.inventory.find(itemName => {
-                if(itemName._id === _id){
-                    count = parseInt(itemName.count);
-                }else{
-                    return;
-                }
-            }); 
-            count - count + 1;
-            return count;
-        }
-         if(!profileData.inventory.find(itemName => itemName._id === addItem)){
-            profileData.inventory.push({_id: addItem, count: 1});
-            profileData.save();
-        }else{
-            let counter = getCount(addItem);
-            await ProfileModels.findOneAndUpdate({
-                userId: message.author.id, 
-                "inventory._id": addItem
-            }, {
-                $set: {
-                    "inventory.$.count": counter
-                }
-            })
+        async function getCount(_id) {
+            let item = profileData.inventory.find(itemName => itemName._id === _id);
+            if (item) {
+                return parseInt(item.count);
+            } else {
+                return 0; 
+            }
         }
 
-            message.reply(`Added ${addItem} to your inventory`);
+        for(let i = 0; i < addItemArray.length; i++) {
+            let counter = await getCount(addItemArray[i]);
+            if (counter === 0) {
+                profileData.inventory.push({_id: addItemArray[i], count: 1});
+            } else {
+                counter += 1;
+                await ProfileModels.findOneAndUpdate({
+                    userId: message.author.id, 
+                    "inventory._id": addItemArray[i]
+                }, {
+                    $set: {
+                        "inventory.$.count": counter
+                    }
+                });
+            }
         }
+
+        profileData.save();
+        message.reply(`Added ${addItemArray.join(', ')} to your inventory`);
     }
+}
