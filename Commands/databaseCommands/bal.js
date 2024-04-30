@@ -20,10 +20,10 @@ module.exports = {
 	    .setTimestamp(message.createdTimestamp)
       .addFields([{
         name: 'Wallet Balance',
-        value: `You have **$${user.coins}**`
+        value: `You have **$${user.coins.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`
     }, { 
         name: 'Bank Balance',
-        value: `You have **$${user.bank}**`,
+        value: `You have **$${user.bank.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`,
         inline: true
     }]);
     message.channel.send({embeds: [Response]})
