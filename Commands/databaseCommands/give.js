@@ -39,6 +39,7 @@ module.exports = {
       return message.channel.send(`This player has been given ${amount} of cash!`);
     } catch (err) {
       console.log(err);
+      message.channel.send("Something went wrong, try again later!");
     }
   },
 };

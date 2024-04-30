@@ -20,10 +20,10 @@ module.exports = {
 	    .setTimestamp(message.createdTimestamp)
       .addFields([{
         name: 'Wallet Balance',
-        value: `You have **$${user.coins.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`
+        value: `You have **${user.coins.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`
     }, { 
         name: 'Bank Balance',
-        value: `You have **$${user.bank.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`,
+        value: `You have **${user.bank.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}**`,
         inline: true
     }]);
     message.channel.send({embeds: [Response]})
@@ -32,6 +32,6 @@ module.exports = {
         message.reply(`There was a problem retrieving your inventory, please contact staff!`);
         console.log(err);
     }
-  };
+  }; //testing
 
   
