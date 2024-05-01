@@ -32,6 +32,6 @@ module.exports = {
         message.reply(`There was a problem retrieving your inventory, please contact staff!`);
         console.log(err);
     }
-  }; //testing
+  }; 
 
   

@@ -8,6 +8,7 @@ const profileSchema = new mongoose.Schema({
   coins: { type: Number, default: 0 },
   bank: { type: Number, default: 0 },
   lotterySesh: { type: Number, default: 1 },
+  businessList: [{ _id: String, count: Number }],
   inventory: [{_id: String, count: Number }],
   licenses:  [{_id: String, count: Number }],
   isCuffed: { type: Boolean, default: false },

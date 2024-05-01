@@ -6,7 +6,7 @@ module.exports = {
   permissions: [],
   description: "withdraw coins from your bank",
   async execute(message, args, cmd, client, discord, profileData) {
-    const amount = args[0];
+    let amount = parseInt(args[0]);
     if (amount % 1 != 0 || amount <= 0) return message.channel.send("__Withdraw amount must be a whole number!__");
 
     try {
@@ -24,7 +24,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`You withdrew **$${amount}** into your wallet!`);
+      return message.channel.send(`You withdrew **${amount.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}** into your wallet!`);
     } catch (err) {
       console.log(err);
     }

@@ -14,12 +14,10 @@ module.exports = {
             else
             !message.member.roles.cache.has(role)
 
-    if (!args.length) return message.channel.send("You need to mention a player to give them coins");
-    const amount = args[1];
+    if (!args.length) return message.channel.send("You need to mention a player to give them cash");
+    let amount = parseInt(args[1]);
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user does not exist");
-
-    
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
@@ -36,7 +34,7 @@ module.exports = {
         }
       );
 
-      return message.channel.send(`This player has been given ${amount} of cash!`);
+      return message.channel.send(`This player has been given ${amount.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} of cash!`);
     } catch (err) {
       console.log(err);
       message.channel.send("Something went wrong, try again later!");

@@ -5,7 +5,7 @@ const ProfileModels = require('../../Models/profileSchema')
 const profileData = require('../../Events/Message/messageCreate')
 
 module.exports = {
-     name: 'removelicense',
+     name: 'removebusiness',
      category: 'removes from your inv',
         
     async execute(message, args, commandName, client, Discord, profileData) {
@@ -22,12 +22,12 @@ module.exports = {
         let addItem = args.slice(1).join(' ').toLowerCase().trim();
         if (!addItem.length) return message.channel.send("You need to provide a license!");
 
-         if(user.licenses.find(itemName => itemName._id === addItem)){
-            user.licenses.pull({_id: addItem, count: 1});
+         if(user.businessList.find(itemName => itemName._id === addItem)){
+            user.businessList.pull({_id: addItem, count: 1});
             user.save();
-            message.reply(`Removed ${addItem} from licenses`);
+            message.reply(`Removed ${addItem} from business list`);
             }else{
-                message.reply("You do not have this item!")
+                message.reply("Does not exist!")
             }  
         }
     }

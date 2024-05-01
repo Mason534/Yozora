@@ -5,7 +5,7 @@ const ProfileModels = require('../../Models/profileSchema')
 const profileData = require('../../Events/Message/messageCreate')
 
 module.exports = {
-     name: 'addlicense',
+     name: 'addbusiness',
      category: 'adds to your inv',
         
      async execute(message, args, commandName, client, Discord, profileData) {
@@ -19,11 +19,11 @@ module.exports = {
         }
         
         let addItem = args.slice(1).join(' ').toLowerCase().trim();
-        if (!addItem.length) return message.channel.send("You need to provide a license!");
+        if (!addItem.length) return message.channel.send("You need to provide a company!");
 
         function getCount(_id){
             let count;
-            user.licenses.find(itemName => {
+            user.businessList.find(itemName => {
                 if(itemName._id === _id){
                     count = parseInt(itemName.count);
                 }else{
@@ -33,21 +33,21 @@ module.exports = {
             count++;
             return count;
         }
-         if(!user.licenses.find(itemName => itemName._id === addItem)){
-            user.licenses.push({_id: addItem, count: 1});
+         if(!user.businessList.find(itemName => itemName._id === addItem)){
+            user.businessList.push({_id: addItem, count: 1});
             user.save();
         }else{
             let counter = getCount(addItem);
             await ProfileModels.findOneAndUpdate({
                 userId: message.author.id, 
-                "licenses._id": addItem
+                "businessList._id": addItem
             }, {
                 $set: {
-                    "licenses.$.count": counter
+                    "businessList.$.count": counter
                 }
             })
         }
 
-            message.reply(`Added ${addItem} to your licenses`);
+            message.reply(`Added ${addItem} to ${target}'s business list`);
         }
     }

@@ -22,12 +22,17 @@ module.exports = {
                 var invItems = createinv(invArr).join("\n");
                 var lArr = user.licenses.map(x => x._id);
                 var lItems = createl(lArr).join("\n");
+                var arr = user.businessList.map(x => x._id);
+                var businesses = create2(arr).join("\n");
 
                 if(user.inventory.length){
                     invEmbed.setThumbnail(target.displayAvatarURL({dynamic: true}))
                     invEmbed.addField(`Items`, `${invItems}`, true);
                     invEmbed.addField(`Licenses`, ` Driver's License \n ${lItems}`, true);
                     invEmbed.addField(`Wallet`, `$${user.coins}`, true);
+                    if(user.businessList.length >= 1){
+                        invEmbed.addField(`Businesses`, `${businesses}`, true);
+                    }
                 }
             } else {
                 
@@ -38,6 +43,29 @@ module.exports = {
             message.reply(`There was a problem retrieving your inventory, please contact staff!`);
             console.log(err);
         }
+
+        function create2(array){
+            let numCount = [];
+            for(var i = 0; i < array.length; i++){
+                if(profileData.businessList.find(item => item.id === array[i])){
+                    profileData.businessList.find(itemName => {
+                        let count = parseInt(itemName.count);
+                        if(itemName._id === array [i]){
+                            numCount.push(count);
+                        }
+                    });
+                }
+                continue;
+            }
+
+            let itemInl = [];
+            for(var x = 0; x < array.length; x++){
+                itemInl.push(`${array[x]} x${numCount[x]}`);
+            }
+        
+            return itemInl;
+        }
+
 
         function createl(array){
             let numCount = [];

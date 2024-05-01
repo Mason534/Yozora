@@ -18,11 +18,15 @@ module.exports = {
             const invEmbed = new Discord.MessageEmbed()
             .setTitle(`${message.author.username}'s inventory`)
 
-            if(profileData.inventory.length || profileData.licenses.length >= 1){
+            if(profileData.inventory.length >= 1 || profileData.licenses.length >= 1 || profileData.businessList.length >= 1){
                 var invArr = profileData.inventory.map(x => x._id);
                 var invItems = createinv(invArr).join("\n");
+
                 var lArr = profileData.licenses.map(x => x._id);
                 var lItems = createl(lArr).join("\n");
+
+                var arr = profileData.businessList.map(x => x._id);
+                var businesses = create2(arr).join("\n");
 
                 if(profileData.inventory.length){
                     invEmbed.setColor('PURPLE');
@@ -30,6 +34,9 @@ module.exports = {
                     invEmbed.addField(`Items`, `${invItems}`, true);
                     invEmbed.addField(`Licenses`, ` Driver's License \n ${lItems}`, true);
                     invEmbed.addField(`Wallet`, `$${user.coins}`, true);
+                    if(profileData.businessList.length >= 1){
+                    invEmbed.addField(`Businesses`, `${businesses}`, true);
+                    }
                 }
             } else {
                 
@@ -39,6 +46,28 @@ module.exports = {
         }catch(err){
             message.reply(`There was a problem retrieving your inventory, please contact staff!`);
             console.log(err);
+        }
+
+        function create2(array){
+            let numCount = [];
+            for(var i = 0; i < array.length; i++){
+                if(profileData.businessList.find(item => item.id === array[i])){
+                    profileData.businessList.find(itemName => {
+                        let count = parseInt(itemName.count);
+                        if(itemName._id === array [i]){
+                            numCount.push(count);
+                        }
+                    });
+                }
+                continue;
+            }
+
+            let itemInl = [];
+            for(var x = 0; x < array.length; x++){
+                itemInl.push(`${array[x]} x${numCount[x]}`);
+            }
+        
+            return itemInl;
         }
 
         function createl(array){
